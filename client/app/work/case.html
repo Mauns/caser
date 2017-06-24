@@ -1,0 +1,54 @@
+<template name="case">
+<!--
+    {{cases.title}}
+    {{#each cases.category}}
+        {{tags}}
+    {{/each}}
+    {{#each cases.picture}}
+        {{this}}
+    {{/each}}
+    {{#with casesImg}}
+        {{this.url}}
+    {{/with}}
+    {{#with postImg}}
+        {{this.url}}
+    {{/with}}
+-->
+
+    <div class="caseDetail">
+        <div class="cdHero">
+            <div class="cdHeroImage" style="background:url('{{#with casesImg}}{{this.url}}{{/with}}');
+            background-position: center;background-size: cover; background-attachment:fixed;"></div>
+            <h2 class="cdTitle">{{cases.title}}</h2>
+            {{#if cases.link.length}}
+            <a class="cdLink" href="{{cases.link}}" target="_blank">Zur Seite</a>
+            {{else}}
+
+            {{/if}}
+            <div class="cdGrad"></div>
+        </div>
+        <div class="cdCutterWrap"><div class="cdCutter"></div></div>
+        <div class="cdContent">
+            <div class="cdImages">
+                <div class="row">
+                    {{#each postImg}}
+                        <div class="cdImageWrap small-12 medium-12 column">
+                            <div class="cdImage" style="background:url(''); background-size: cover; background-position: center;">
+                                <img src="{{this.url}}" alt="" />
+                            </div>
+                        </div>
+                    {{/each}}
+                    <div class="cdVideoWrap">
+                        <div class="cdVideo">
+                            {{#each cases.video}}
+                                <iframe src="{{code}}" frameborder="0"></iframe>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="/" class="btn back">Zurück</a>
+    </div>
+
+</template>

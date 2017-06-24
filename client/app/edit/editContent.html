@@ -1,0 +1,26 @@
+<template name="editContent">
+    {{>worksFormInsert}}
+</template>
+
+
+
+
+<template name="worksFormInsert">
+    <div class="caseAdder">
+        <h1>caseAdder</h1>
+    </div>
+    <div class="formWrap row">
+        {{#autoForm collection="Works" id="worksFormInsert" type="insert"}}
+            <div class="panelControl">{{> afQuickField name="title"}}</div>
+            <div class="panelControl">{{> afQuickField name='category'}}</div>
+            <div class="panelControl">{{> afQuickField name='description' rows=6}}</div>
+            <div class="panelControl">{{> afQuickField name='link'}}</div>
+            <div class="panelControl">{{> afQuickField name='video'}}</div>
+            <div class="panelControl">{{> afQuickField name='picture'}}</div>
+            <div class="panelControl">{{> afQuickField name='bgimg' id="pictureUp"}}</div>
+            <!-- {{> afQuickField name='bgimg'}} -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        {{/autoForm}}
+
+    </div>
+</template>

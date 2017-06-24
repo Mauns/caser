@@ -1,0 +1,100 @@
+<template name="work">
+
+    {{#each cases}}
+    <div class="case small-12 medium-12">
+        <div class="caseWrap {{#each category}}{{tags}}{{/each}}">
+            <a href="/case/{{_id}}">
+                <div class="caseImageWrap medium-5 column pZero">
+                    <div class="caseImage" style="background:url('{{#with casesImg}}{{this.url}}{{/with}}');
+                    background-position: center;background-size: cover;">
+                    </div>
+                </div>
+                <div class="caseInfo medium-7 column">
+                    <div>
+                        <div class="caseTitle">
+                            {{title}}
+                            <div class="caseCat">
+                                {{#each category}}
+                                    {{tags}}
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="caseDesc">
+                            {{description}}
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {{#if currentUser}}
+                {{#quickRemoveButton class="caseDelete" collection="Works" _id=this._id}}
+                    Delete Me
+                {{/quickRemoveButton}}
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+
+</template>
+
+
+
+<!-- <h1>Insert</h1> -->
+<!-- {{> worksFormInsert}}<br> -->
+
+
+<!-- {{#each cases}}
+    <div class="caseWrap">
+        <a href="/referenzen/{{_id}}">
+            <b>URLS:</b>
+            {{#with casesImg}}
+                {{this.url}}
+            {{/with}}<br>
+            <b>PICTURE:</b>
+            {{#each picture}}
+                {{this}}
+            {{/each}}<br>
+            <b>TITLE:</b>
+            {{title}}<br>
+            <b>CATEGORY:</b>
+            {{#each category}}
+                {{tags}}
+            {{/each}}<br>
+            <b>CODE:</b>
+            {{#each video}}
+                {{code}}
+            {{/each}}
+            <br>
+            <b>postImg:</b>
+            {{#each postImg}}
+                {{this.url}}
+            {{/each}}
+            <br>
+        </a>
+        {{#quickRemoveButton collection="Works" _id=this._id}}
+            Delete Me
+        {{/quickRemoveButton}}
+    </div>
+{{/each}} -->
+
+
+
+<!-- update Form  -->
+<!-- <template name="worksFormUpdate">
+    {{#autoForm collection="Works" id="worksFormUpdate" type=formType doc=selectedCaseDoc}}
+        {{> afQuickField name="title"}}
+        {{> afQuickField name='category'}}
+        {{> afQuickField name='video'}}
+        {{> afQuickField name='picture'}}
+        {{> afQuickField name='bgimg' id="pictureUp"}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    {{/autoForm}}
+</template> -->
+
+
+<template name="mySelectFileBtn">
+  <!-- <button type="button" class="js-af-select-file">Upload file</button> -->
+</template>
+
+<template name="myRemoveFileBtn">
+  <!-- <button type="button" class="js-af-remove-file">Remove</button> -->
+</template>

@@ -1,0 +1,83 @@
+// Easing mixins
+.cubic(@a: 260ms){
+	-webkit-transition: all @a cubic-bezier(0.405, 0.000, 0.085, 1);
+-webkit-transition: all @a cubic-bezier(0.405, 0.000, 0.085, 1.005);
+   -moz-transition: all @a cubic-bezier(0.405, 0.000, 0.085, 1.005);
+     -o-transition: all @a cubic-bezier(0.405, 0.000, 0.085, 1.005);
+        transition: all @a cubic-bezier(0.405, 0.000, 0.085, 1.005);
+
+-webkit-transition-timing-function: cubic-bezier(0.405, 0.000, 0.085, 1);
+-webkit-transition-timing-function: cubic-bezier(0.405, 0.000, 0.085, 1.005);
+   -moz-transition-timing-function: cubic-bezier(0.405, 0.000, 0.085, 1.005);
+     -o-transition-timing-function: cubic-bezier(0.405, 0.000, 0.085, 1.005);
+        transition-timing-function: cubic-bezier(0.405, 0.000, 0.085, 1.005);
+};
+
+.easeOut(@a: 250ms){
+	-webkit-transition: all @a cubic-bezier(0.215, 0.610, 0.065, 0.995);
+   -moz-transition: all @a cubic-bezier(0.215, 0.610, 0.065, 0.995);
+     -o-transition: all @a cubic-bezier(0.215, 0.610, 0.065, 0.995);
+        transition: all @a cubic-bezier(0.215, 0.610, 0.065, 0.995); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.065, 0.995);
+   -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.065, 0.995);
+     -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.065, 0.995);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.065, 0.995); /* custom */
+}
+
+.ease(@a: 250ms){
+	  -webkit-transition: all @a ease;
+  -moz-transition: all @a ease;
+  -o-transition: all @a ease;
+  transition: all @a ease;
+};
+
+.transform(@a){
+	transform: @a ;
+	-moz-transform: @a ;
+	-webkit-transform: @a ;
+	-os-transform: @a ;
+	-ms-transform: @a ;
+}
+
+.keyframes(@name; @arguments) {
+  @-moz-keyframes @name { @arguments(); }
+  @-webkit-keyframes @name { @arguments(); }
+  @keyframes @name { @arguments(); }
+}
+
+.animation(@ani){
+  animation:@ani;
+  -webkit-animation:@ani;
+  -moz-animation:@ani;
+  -ms-animation:@ani;
+  -o-animation:@ani;
+}
+
+
+.gradient(@a:#40c4ff , @b:#99d5d0 , @c: 45deg){
+background: @b;
+background: -moz-linear-gradient(@c,  @a 0%, @b 60%);
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,@a), color-stop(60%,@b));
+background: -webkit-linear-gradient(@c,  @a 0%,@b 60%);
+background: -o-linear-gradient(@c,  @a 0%,@b 60%);
+background: -ms-linear-gradient(@c,  @a 0%,@b 60%);
+background: linear-gradient(@c,  @a 0%,@b 60%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@a', endColorstr='@b',GradientType=1 );
+}
+
+.radGradient(@a: rgba(0, 0, 0, 0), @b: rgb(153, 72, 247), @c: rgba(0, 0, 0, 0), @d: 0%, @e: 50%, @f: 100%){
+background: @b;
+background: -moz-radial-gradient(center, ellipse cover, @a @d, @b @e, @c @f);
+background: -webkit-radial-gradient(center, ellipse cover, @a @d,@b @e,@c @f);
+background: radial-gradient(ellipse at center, @a @d,@b @e,@c @f);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@a', endColorstr='@c',GradientType=1 );
+}
+
+.column-count(@a){
+  -moz-column-count:@a;
+  -webkit-column-count:@a;
+  -ms-column-count:@a;
+  -o-column-count:@a;
+  column-count:@a;
+}

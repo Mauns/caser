@@ -1,0 +1,26 @@
+<template name="accounts">
+    <div class="accountsWrap">
+        {{#if currentUser}}
+            <h3>Du bist eingeloggt.</h3>
+        {{else}}
+            {{>registerUser}}
+            {{>loginUser}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="registerUser">
+    <form id="registerUser">
+        <input type="email" name="registerEmail">
+        <input type="password" name="registerPassword">
+        <input type="submit" name="registerSubmit" value="Registrieren">
+    </form>
+</template>
+
+<template name="loginUser">
+    <form id="loginUser">
+        <input type="email" name="loginEmail">
+        <input type="password" name="loginPassword">
+        <input type="submit" name="loginSubmit" value="Login">
+    </form>
+</template>

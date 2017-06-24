@@ -1,0 +1,127 @@
+.caseDetail{
+    position: relative;
+    padding-bottom: 60px;
+    .cdHero{
+        position: relative;
+        height: 450px;
+        width: 100%;
+        padding: 30px;
+        background: @df;
+
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        .cdHeroImage{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0.1;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+            z-index: 0;
+        }
+        .cdGrad{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 300px;
+            width: 100%;
+            .gradient(@df, fade(@df, 0), 0deg);
+            opacity: 0.5;
+        }
+    }
+    .cdCutterWrap{
+        position: relative;
+        max-width: 650px;
+        width: 100%;
+        margin: 30px auto 0;
+    }
+    .cdCutter{
+        position: relative;
+        margin: 0 30px 0;
+        // width: 100%;
+        height: 1px;
+        background: fade(@af, 20%);
+        top: 0;
+        left: 0;
+        right: 0;
+        // margin: 30px auto 0;
+    }
+    .cdContent{
+        padding: 60px 0.9375rem;
+    }
+    .cdTitle{
+        font-size: @h2;
+        font-weight: @bold;
+        color: @white;
+        padding:10px 30px;
+        margin: 0;
+        background: fade(darken(@af, 27%), 50%);
+        z-index: 1;
+        // .border-radius;
+    }
+    .cdLink{
+        margin-top: 10px;
+        color: @white;
+        z-index: 1;
+    }
+    .cdImages{
+        .cdImageWrap{
+            position: relative;
+            // height: 0;
+            // padding-bottom: 56.25%;
+            margin-bottom: 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .cdImage{
+            // position: absolute;
+            top: 0;
+            height: 100%;
+            img{
+                position: relative;
+                display: block;
+                width: 100%;
+                .shadow;
+            }
+            // width: 100%;
+        }
+    }
+    .cdVideoWrap{
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding: 0 0 56.25%;
+        .cdVideo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            iframe{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "zeigeseite",
+  "private": true,
+  "scripts": {
+    "start": "MONGO_URL='mongodb://mauns:krUc0iYYwus0cq0b@clusterz-shard-00-00-x2uxv.mongodb.net:27017,clusterz-shard-00-01-x2uxv.mongodb.net:27017,clusterz-shard-00-02-x2uxv.mongodb.net:27017/clusterz?ssl=true&replicaSet=clusterz-shard-0&authSource=admin' meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "bcrypt": "^1.0.2",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

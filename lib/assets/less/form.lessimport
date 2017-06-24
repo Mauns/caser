@@ -1,0 +1,129 @@
+.caseAdder{
+    position: relative;
+    height: 250px;
+    background: @a;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    h1{
+        font-size: @h2;
+        padding: 0;
+        color: @white;
+    }
+}
+
+.formWrap{
+    padding: 90px 0 60px;
+    .panelControl{
+        position: relative;
+        border-bottom: 1px @b solid;
+        padding: 20px 0 20px;
+        width: 100%;
+        display: inline-block;
+    }
+    .panel{
+        position: relative;
+    }
+    label{
+        width:33.333%;
+        float: left;
+    }
+    .form-control{
+        width: 66.666%;
+        float: left;
+    }
+    .autoform-array-item-body{
+        padding: 15px;
+        background: fade(@b, 33%);
+        .border-radius;
+    }
+    .list-group-item.autoform-array-item{
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &>div{
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        }
+    }
+    .form-group{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .img-fileUpload-thumbnail{
+        .border-radius;
+        overflow: hidden;
+    }
+    .has-error .help-block{
+        position: absolute;
+        background: spin(@a, 225);
+        padding: 15px;
+        color: @white;
+        .border-radius;
+        right: 0;
+        margin-top: -20px;
+        margin-right: -20px;
+    }
+}
+
+.accountsWrap{
+    position: relative;
+    padding: 90px 30px 60px;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+#registerUser, #loginUser{
+    position:relative;
+    padding: 15px;
+    display: inline-block;
+    background: @white;
+    margin: 30px;
+    .shadow;
+    .border-radius;
+    input{
+        position: relative;
+        display: block;
+        border: none;
+    }
+    input[type^="email"],input[type^="password"]{
+        margin: 0 auto 20px;
+        background: @b;
+        padding: 10px;
+        .border-radius;
+    }
+}
